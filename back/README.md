@@ -18,3 +18,26 @@ This project serves as a "Hello World" template designed to help teammates prepa
 ```bash
 git clone https://gitlab.com/hhrzc/hello-hakaton
 cd hello-hakaton/back
+```
+
+## Usage
+
+### The project exposes a single endpoint:
+
+- Endpoint: /helloworld
+- Method: GET
+- Parameters:
+  - `word`: The word you want to include in the greeting.
+
+### Example
+
+```bash
+curl http://localhost:8080/helloworld?word=Team
+```
+
+#### Response
+```json
+{
+"message": "Hello Team!"
+}
+```
