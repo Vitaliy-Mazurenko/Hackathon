@@ -13,6 +13,10 @@ header {
   margin: auto 0;
   font-size: 1.625rem;
   font-weight: 400;
+  color: white;
+  &:hover{
+    color: white;
+  }
 }
 
 .user {
