@@ -3,35 +3,50 @@
   height: 100vh;
   background-image: url('../../assets/login.svg');
   background-position: center;
+  background-size: cover;
+}
+
+.header{
+  background-image: url('../../assets/loginHeader.svg');
+  background-position: center center;
+  background-size: cover;
+  width: 214px;
+  height: 96px;
+  opacity: 0.8;
+  margin: 50px auto;
 }
 
 
 .eForm {
-  width: 100%;
-  max-width: 500px;
-  height: 100vh;
+  width: 45%;
+  max-width: 550px;
+  height: 356px;
   margin: auto;
-  // min-height: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
-// .button {
-//   width: 50px;
-//   height: 50px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background: #242424;
-//   transition: .5s; border-radius: 50%;
-//   font-size: 38px;
-//   user-select: none;
-//   padding: 0;
 
-//   &:hover {
-//     filter: invert(1);
-//     cursor: pointer;
+.textForm {
+  text-align: left!important;
+  display: inline-block;
+}
 
-//   }
-// }
+.groupForm{
+display: flex;
+flex-direction: column;
+padding-bottom: 30px;
+padding-left: 10px;
+padding-right: 10px;
+width: 90%;
+}
+
+.buttonLogin {
+margin-top: 20px!important;
+margin-bottom: 40px!important;
+background-color: black!important;
+width: 90%;
+color: white;
+}

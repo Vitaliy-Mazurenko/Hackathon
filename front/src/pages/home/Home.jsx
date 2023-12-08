@@ -43,12 +43,12 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
-             <div className="App-header">
-         <h2 className="text-header">{/*е-Ветеран*/}</h2> 
+             <div className={classes.header}>
                  </div>
       <form className={classes.eForm}>
-        <h2 className='textForm'>е-Ветеран</h2>
-        <div className='form-group'>
+        
+        <div className={classes.groupForm}>
+        <h2 className={classes.textForm}>е-Ветеран</h2>
           <TextField
             id="outlined-basic"
             label="Логін"
@@ -60,7 +60,7 @@ const Home = () => {
             // error={!!loginError}
           />
         </div>
-        <div className='form-group'>
+        <div className={classes.groupForm}>
           <TextField
             id="outlined-password-input"
             type="password"
@@ -74,9 +74,8 @@ const Home = () => {
             error={passwordError}
           />
         </div>
-        <Button className='buttonLogin'
+        <Button className={classes.buttonLogin}
           variant="contained"
-          color="primary"
           disabled={passwordError}
           onClick={handleSubmit}>Увійти
         </Button>
