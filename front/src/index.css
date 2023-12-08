@@ -16,6 +16,15 @@
   width: 100%;
   display: flex;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
 
 a {
   font-weight: 500;
@@ -32,6 +41,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+.active {
+  background-color: #283e59;
+}
+.active:hover {
+  background-color: #283e59;
 }
 
 h1 {
