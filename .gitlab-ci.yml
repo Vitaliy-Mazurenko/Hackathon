@@ -24,3 +24,23 @@ build-task:
     - hackathon-test
   only:
     - back-add-pipline
+    
+create-docker-task:
+  script:
+    - docker build -t template-image:latest .
+  needs:
+    - job: build-task
+  tags:
+    - hackathon-test
+  only:
+    - back-add-pipline
+    
+run-task:
+  script:
+    - docker run -d --name template-container --network template-net -p 8080:8080 template-image:latest
+  needs:
+    - job: create-docker-task
+  tags:
+    - hackathon-test
+  only:
+    - back-add-pipline    
