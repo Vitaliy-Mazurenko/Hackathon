@@ -46,12 +46,12 @@ const Home = () => {
              <div className="App-header">
          <h2 className="text-header">{/*е-Ветеран*/}</h2> 
       </div>
-      <form className="demoForm" style={{ width: '500px', margin: 'auto' }}>
-        <h2 className='textForm'>Login</h2>
+      <form className="demoForm">
+        <h2 className='textForm'>е-Ветеран</h2>
         <div className='form-group'>
           <TextField
             id="outlined-basic"
-            label="login"
+            label="Логін"
             variant="outlined"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
@@ -64,7 +64,7 @@ const Home = () => {
           <TextField
             id="outlined-password-input"
             type="password"
-            label="Password"
+            label="Пароль"
             variant="outlined"
             value={password}
             onChange={handleChangePassword}
@@ -78,7 +78,7 @@ const Home = () => {
           variant="contained"
           color="primary"
           disabled={passwordError}
-          onClick={handleSubmit}>Login
+          onClick={handleSubmit}>Увійти
         </Button>
 
         {/* {loginError ? (

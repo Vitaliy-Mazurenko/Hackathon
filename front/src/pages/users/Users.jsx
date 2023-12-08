@@ -2,7 +2,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import classes from './users.module.scss'
 import {decrement, increment} from "../../store/slices/countSlice.js";
-import { Button } from "@mui/material";
+import { AppBar, Button } from "@mui/material";
+// import PersonIcon from '@mui/icons-material/Person';
 
 
 const Users = () => {
@@ -18,7 +19,11 @@ const Users = () => {
 
 
     return (
-        <div className={classes.home}>
+        <div className={classes.users}>
+            <AppBar className={classes.appBar}>
+                <span>е-Ветеран</span>
+                {/* <PersonIcon className="personIcon" /> */}
+            </AppBar>
             <Button onClick={handleMinus}>
                 -
             </Button>
@@ -26,6 +31,7 @@ const Users = () => {
             <Button onClick={handlePlus}>
                 +
             </Button>
+            
 
         </div>
     );
