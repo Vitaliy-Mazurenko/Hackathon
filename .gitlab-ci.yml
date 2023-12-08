@@ -16,7 +16,7 @@ build-task:
     - /opt/gradle/gradle-8.2/bin/gradle bootJar
   artifacts:
     paths:
-      - build/libs/*.jar
+      - back/build/libs/*.jar
   needs:
     - job: hello-world-task
       artifacts: true
