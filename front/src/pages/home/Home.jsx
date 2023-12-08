@@ -36,7 +36,7 @@ const Home = () => {
 
   const handleSubmit = async () => {
     if (password) {   
-    navigate('/users');
+    navigate('/botSettings1');
     }
 
   }
