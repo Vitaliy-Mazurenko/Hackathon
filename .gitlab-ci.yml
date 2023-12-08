@@ -36,7 +36,7 @@ create-docker-task:
     - back-add-pipline
     
 run-task:
-    script:
+  script:
     - |
       CONTAINER_ID=$(docker ps -aqf "name=template-container")
       if [ -n "$CONTAINER_ID" ]; then
