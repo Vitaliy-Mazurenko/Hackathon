@@ -1,0 +1,9 @@
+hello-world-task:
+  script:
+    - echo Hello World!
+    - whoami
+    - java --version
+    - docker --version
+    - gradle --version
+  tags:
+    - hackathon-test
