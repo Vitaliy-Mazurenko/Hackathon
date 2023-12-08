@@ -45,8 +45,8 @@ const Home = () => {
         <div className={classes.home}>
              <div className="App-header">
          <h2 className="text-header">{/*е-Ветеран*/}</h2> 
-      </div>
-      <form className="demoForm">
+                 </div>
+      <form className={classes.eForm}>
         <h2 className='textForm'>е-Ветеран</h2>
         <div className='form-group'>
           <TextField
