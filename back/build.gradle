@@ -21,13 +21,20 @@ repositories {
 	mavenCentral()
 }
 
+ext{
+	mysql_connector='8.0.30'
+}
+
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.telegram:telegrambots:6.5.0'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation group: 'mysql', name: 'mysql-connector-java', version: "${mysql_connector}"
 }
 
 tasks.named('test') {

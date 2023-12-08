@@ -1,10 +1,10 @@
 # Project Name
 
-HelloWorld Hackathon Preparation Project
+e-veteran social service supporting.
 
 ## Description
 
-This project serves as a "Hello World" template designed to help teammates prepare for the upcoming hackathon. It includes a simple Spring Boot application with a single endpoint that allows you to customize a greeting.
+This project designed during hackathon to help Ukrainian defenders.
 
 ## Getting Started
 
@@ -22,22 +22,18 @@ cd hello-hakaton/back
 
 ## Usage
 
-### The project exposes a single endpoint:
+### The project healthcheck endpoint:
 
-- Endpoint: /helloworld
+- Endpoint: /healthcheck
 - Method: GET
-- Parameters:
-  - `word`: The word you want to include in the greeting.
 
 ### Example
 
 ```bash
-curl http://localhost:8080/helloworld?word=Team
+curl http://x.x.x.x/healthcheck
 ```
 
 #### Response
 ```json
-{
-"message": "Hello Team!"
-}
+"Ok"
 ```
