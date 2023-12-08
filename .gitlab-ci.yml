@@ -27,7 +27,7 @@ build-task:
     
 create-docker-task:
   script:
-    - docker build -t template-image:latest .
+    - docker build -t template-image:latest ./back
   needs:
     - job: build-task
   tags:
