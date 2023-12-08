@@ -24,6 +24,7 @@ repositories {
 ext{
 	mysql_connector='8.0.30'
 	jaxb_version = '2.3.1'
+	webmwc_swagger = '2.2.0'
 }
 
 dependencies {
@@ -37,7 +38,7 @@ dependencies {
 
 	implementation group: 'mysql', name: 'mysql-connector-java', version: "${mysql_connector}"
 
-//	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${webmwc_swagger}"
 
 	//Fixing "Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlElement" error
 	implementation "javax.xml.bind:jaxb-api:${jaxb_version}"

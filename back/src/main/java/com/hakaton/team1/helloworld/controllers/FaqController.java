@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/faq")
 public class FaqController {
 
-    private final FaqService faqService;
-
-    public FaqController(
-            @Autowired FaqService faqService) {
-        this.faqService = faqService;
-    }
+//    private final FaqService faqService;
+//
+//    public FaqController(
+//            @Autowired FaqService faqService) {
+//        this.faqService = faqService;
+//    }
 
 //    public ResponseEntity<Long> addFaq(FAQ faq){
 //
