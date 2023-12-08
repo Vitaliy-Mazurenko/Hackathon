@@ -36,7 +36,13 @@ create-docker-task:
     - back-add-pipline
     
 run-task:
-  script:
+    script:
+    - |
+      CONTAINER_ID=$(docker ps -aqf "name=template-container")
+      if [ -n "$CONTAINER_ID" ]; then
+        docker stop "$CONTAINER_ID"
+        docker rm "$CONTAINER_ID"
+      fi
     - docker run -d --name template-container --network template-net -p 8080:8080 template-image:latest
   needs:
     - job: create-docker-task
