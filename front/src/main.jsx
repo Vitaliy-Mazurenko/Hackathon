@@ -6,6 +6,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import store from "./store/store.js";
 import {QueryClient, QueryClientProvider} from "react-query";
+import './fonts/e-Ukraine/e-Ukraine-Regular.otf';
 
 const queryClient = new QueryClient()
 
