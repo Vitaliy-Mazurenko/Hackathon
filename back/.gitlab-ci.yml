@@ -7,3 +7,5 @@ hello-world-task:
     - gradle --version
   tags:
     - hackathon-test
+  only:
+    - back-add-pipline
