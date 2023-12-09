@@ -39,6 +39,10 @@ public class BotController extends TelegramLongPollingBot {
         if (update.hasMessage() && update.getMessage().hasText()) {
             String messageText = update.getMessage().getText();
 
+            if(messageText.contains("start")){
+                userState = UserState.MAIN_MENU;
+            }
+
             switch (userState) {
                 case MAIN_MENU:
                     handleMainMenu(update);
