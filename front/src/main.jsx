@@ -7,7 +7,10 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+    keepPreviousData: true,
+    refetchOnWindowFocus: false
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
