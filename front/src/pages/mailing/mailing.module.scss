@@ -1,5 +1,14 @@
 .mailing {
   height: 200vh;
+  animation: start .5s linear 1;
+  @keyframes start {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
 }
 
 .header {

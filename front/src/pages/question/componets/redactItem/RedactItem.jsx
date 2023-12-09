@@ -6,11 +6,11 @@ import Delete from './../../../../assets/mdi_delete.svg'
 
 
 const RedactItem = ({content, number, setNewQuestions, newQuestions, setIsSaveAvailable}) => {
-    const [input, setInput] = useState(content.name)
-    const [textArea, setTextArea] = useState(content.description)
+    const [input, setInput] = useState(content.title)
+    const [textArea, setTextArea] = useState(content.question)
 
     useEffect(() => {
-        if (input.length > 5 && textArea.length > 5) {
+        if (input?.length > 5 && textArea?.length > 5) {
             setIsSaveAvailable(true)
         } else {
             setIsSaveAvailable(false)
@@ -23,7 +23,7 @@ const RedactItem = ({content, number, setNewQuestions, newQuestions, setIsSaveAv
             if (element.id !== content.id) {
                 return element
             } else {
-                return element.name = e.length ? e : ' '
+                return element.title = e.length ? e : ' '
             }
         }))
     }
@@ -32,7 +32,7 @@ const RedactItem = ({content, number, setNewQuestions, newQuestions, setIsSaveAv
         setNewQuestions(
             newQuestions.filter(element => {
                 if (element.id === content.id) {
-                    return element.description = e.length ? e : ' '
+                    return element.question = e.length ? e : ' '
                 } else {
                     return element
 
@@ -52,9 +52,9 @@ const RedactItem = ({content, number, setNewQuestions, newQuestions, setIsSaveAv
                 <img src={Delete} alt=""/>
             </button>
             <h3>Питання {number + 1}</h3>
-            <TextField error={!(input.length > 5)} label='Питання' onChange={e => handleInput(e.target.value)}
+            <TextField error={!(input?.length > 5)} label='Питання' onChange={e => handleInput(e.target.value)}
                        value={input}/>
-            <TextField error={!(textArea.length > 5)} onChange={e => handleTextArea(e.target.value)} multiline
+            <TextField error={!(textArea?.length > 5)} onChange={e => handleTextArea(e.target.value)} multiline
                        label='Відповідь' value={textArea}/>
         </Card>
 

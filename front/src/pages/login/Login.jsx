@@ -7,18 +7,12 @@ import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import Divider from '@mui/material/Divider';
 
-const Login = () => {
+const Login = ({setUser}) => {
   const navigate = useNavigate();
   const [login, setLogin] = useState('admin')
   const [password, setPassword] = useState('')
   const [passwordError, setPasswordError] = useState('')
 
-  const accessToken = localStorage.getItem("login");
-
-  // if(!accessToken){
-  //   return <div>Need to login</div>
-  // }
-  console.log(accessToken);
 
 
   const handleChangePassword = (e) => {
@@ -35,6 +29,12 @@ const Login = () => {
   const handleSubmit = async () => {
     if (password) {   
     navigate('/home');
+      localStorage.setItem('login', login)
+      localStorage.setItem('password', password)
+      setUser({
+        login: localStorage.getItem('login'),
+        password: localStorage.getItem('password')
+      })
     } else {
       handleBlurPassword();
     }

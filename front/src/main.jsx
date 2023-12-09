@@ -9,7 +9,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient({
     keepPreviousData: true,
-    refetchOnWindowFocus: false
+    refetchOnWindowFocus: false,
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(

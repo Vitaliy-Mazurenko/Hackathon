@@ -8,8 +8,8 @@ const Item = ({content, number}) => {
     return (
         <Card className={classes.card}>
             <h3>Питання {number + 1}</h3>
-            <h4>{content.name}</h4>
-            <p>{content.description}</p>
+            <h4>{content.title}</h4>
+            <p>{content.question}</p>
         </Card>
     );
 };
