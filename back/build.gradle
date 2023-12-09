@@ -37,9 +37,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation group: 'mysql', name: 'mysql-connector-java', version: "${mysql_connector}"
-
+	//Swagger
 	implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${webmwc_swagger}"
-
 	//Fixing "Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlElement" error
 	implementation "javax.xml.bind:jaxb-api:${jaxb_version}"
 
