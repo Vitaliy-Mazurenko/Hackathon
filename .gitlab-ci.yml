@@ -1,0 +1,52 @@
+hello-world-task:
+  script:
+    - echo Hello World!
+    - whoami
+    - java --version
+    - docker --version
+    - /opt/gradle/gradle-8.2/bin/gradle --version
+  tags:
+    - hackathon-test
+  only:
+    - back-add-pipline
+
+build-task:
+  script:
+    - cd back
+    - /opt/gradle/gradle-8.2/bin/gradle bootJar
+  artifacts:
+    paths:
+      - back/build/libs/*.jar
+  needs:
+    - job: hello-world-task
+      artifacts: true
+  tags:
+    - hackathon-test
+  only:
+    - back-add-pipline
+    
+create-docker-task:
+  script:
+    - docker build -t template-image:latest ./back
+  needs:
+    - job: build-task
+  tags:
+    - hackathon-test
+  only:
+    - back-add-pipline
+    
+run-task:
+  script:
+    - |
+      CONTAINER_ID=$(docker ps -aqf "name=template-container")
+      if [ -n "$CONTAINER_ID" ]; then
+        docker stop "$CONTAINER_ID"
+        docker rm "$CONTAINER_ID"
+      fi
+    - docker run -d --name template-container --network template-net -p 8080:8080 template-image:latest
+  needs:
+    - job: create-docker-task
+  tags:
+    - hackathon-test
+  only:
+    - back-add-pipline    

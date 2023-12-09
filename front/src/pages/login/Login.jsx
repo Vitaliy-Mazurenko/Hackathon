@@ -17,7 +17,7 @@ const Login = () => {
     // }
 
   const navigate = useNavigate();
-  const [login, setLogin] = useState('')
+  const [login, setLogin] = useState('admin')
   const [password, setPassword] = useState('')
   const [passwordError, setPasswordError] = useState('')
 
@@ -31,12 +31,14 @@ const Login = () => {
 
   const handleBlurPassword = () => {
     const passwordValid = password.length >= 6;
-    setPasswordError(passwordValid ? '' : 'Password is too short');
+    setPasswordError(passwordValid ? '' : 'Enter password');
   }
 
   const handleSubmit = async () => {
     if (password) {   
-    navigate('/botSettings1');
+    navigate('/home');
+    } else {
+      handleBlurPassword();
     }
 
   }
@@ -76,20 +78,10 @@ const Login = () => {
         </div>
         <Button className={classes.buttonLogin}
           variant="contained"
-          disabled={passwordError}
+          // disabled={passwordError}
           onClick={handleSubmit}>Увійти
         </Button>
 
-        {/* {loginError ? (
-          <div style={{
-            textAlign: 'start',
-            marginTop: 30,
-            paddingLeft: '25px',
-            color: 'red',
-          }}>
-            - {loginError}
-          </div>
-        ) : null} */}
       </form>
         </div>
     );
