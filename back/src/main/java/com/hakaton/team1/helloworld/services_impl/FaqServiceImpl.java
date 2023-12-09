@@ -44,4 +44,9 @@ public class FaqServiceImpl implements FaqService {
     public void deleteFaq(Integer id) {
         faqRepository.deleteById(id);
     }
+
+    @Override
+    public Faq getFaqByTitle(String selectedTitle) {
+        return faqRepository.getFaqByTitle(selectedTitle);
+    }
 }

@@ -9,10 +9,10 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @SpringBootApplication
 public class HelloWorldApplication {
-	private static TelegramBotsApi botsApi;
-	public static void main(String[] args) throws TelegramApiException {
+	public static void main(String[] args) {
 		SpringApplication.run(HelloWorldApplication.class, args);
-		botsApi = new TelegramBotsApi(DefaultBotSession.class);
-		botsApi.registerBot(new BotController());
 	}
 }
+
+//		botsApi = new TelegramBotsApi(DefaultBotSession.class);
+//		botsApi.registerBot(new BotController());

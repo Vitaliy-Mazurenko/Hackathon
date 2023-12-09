@@ -15,5 +15,7 @@ public interface FaqService {
     Faq updateFaq(Integer id, Faq faq);
 
     void deleteFaq(Integer id);
+
+    Faq getFaqByTitle(String selectedTitle);
 }
 

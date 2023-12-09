@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FaqRepository extends CrudRepository<Faq, Integer> {
+    Faq getFaqByTitle(String selectedTitle);
 }
