@@ -1,14 +1,11 @@
 .question {
   display: flex;
   flex-direction: column;
-  padding-right: 84px;
-  padding-top: 120px;
-  width: 100%;
-  max-width: 1452px;
-  margin-left: auto;
+  padding: 120px 84px 84px 40px;
+
+  margin-left: 300px;
   overflow-y: scroll;
   max-height: 100vh;
-  padding-bottom: 40px;
 
   .header {
     display: flex;
