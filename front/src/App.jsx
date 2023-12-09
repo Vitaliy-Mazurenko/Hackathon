@@ -1,11 +1,12 @@
 import {Navigate, Route, Routes} from "react-router-dom";
 import React from "react";
+import Login from "./pages/login/Login.jsx";
 // import Header from "./components/Header/Header.jsx";
 // import Sidebar from "./components/Sidebar/Sidebar.jsx";
 
 
 const Home = React.lazy(() => import("./pages/home/Home.jsx"))
-const BotSettings1 = React.lazy(() => import("./pages/botSettings1/BotSettings1.jsx"))
+// const BotSettings1 = React.lazy(() => import("./pages/botSettings1/BotSettings1.jsx"))
 
 function App() {
 
@@ -14,9 +15,9 @@ function App() {
         {/* <Header />
         <Sidebar /> */}
         <Routes>
-          <Route path="*" element={<Navigate to="/home" />} />
+          <Route path="*" element={<Navigate to="/login" />} />
           <Route path="/home" element={<Home />} />
-          <Route path='/botSettings1' element={<BotSettings1/>}/>
+          <Route path='/login' element={<Login/>}/>
   
         </Routes>
       </>

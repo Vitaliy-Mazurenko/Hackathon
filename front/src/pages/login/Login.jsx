@@ -1,12 +1,12 @@
 import { useState } from 'react';
 // import {useDispatch, useSelector} from "react-redux";
-import classes from './home.module.scss'
+import classes from './login.module.scss'
 // import {decrement, increment} from "../../store/slices/countSlice.js";
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 
-const Home = () => {
+const Login = () => {
     // const count = useSelector(state => state.count.count)
     // const dispatch = useDispatch()
     // const handlePlus = () => {
@@ -95,4 +95,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Login;
