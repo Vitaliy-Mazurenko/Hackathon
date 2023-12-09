@@ -1,4 +1,4 @@
-.question {
+.form{
   display: flex;
   flex-direction: column;
   padding: 120px 84px 84px 40px;
@@ -54,7 +54,22 @@
       display: flex;
       flex-direction: column;
       position: relative;
-
+      .add{
+        background: white;
+        color: black;
+        border-color: black;
+      }
+      .delete{
+        position: absolute;
+        background: transparent;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+      }
+      .radio{
+        display: flex;
+        align-items: center;
+      }
 
       h3 {
         color: #000;
