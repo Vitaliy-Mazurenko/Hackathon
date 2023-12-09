@@ -23,6 +23,7 @@ repositories {
 
 ext{
 	mysql_connector='8.0.30'
+	jaxb_version = '2.3.1'
 }
 
 dependencies {
@@ -35,6 +36,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation group: 'mysql', name: 'mysql-connector-java', version: "${mysql_connector}"
+	//Fixing "Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/annotation/XmlElement" error
+	implementation "javax.xml.bind:jaxb-api:${jaxb_version}"
+
 }
 
 tasks.named('test') {
