@@ -1,0 +1,119 @@
+// table
+.table {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+.head {
+  display: flex;
+  height: 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+}
+.default {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .searchBar {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: auto 0;
+    .searchBtn {
+      background-color: transparent;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .searchIcon {
+      height: 2rem;
+    }
+    .searchInput {
+      padding-left: 0.5rem;
+      outline: none;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      color: #626262;
+      font-size: 1rem;
+      &:focus {
+        &::placeholder {
+          color: transparent;
+        }
+      }
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  .filters {
+    display: flex;
+    gap: 1rem;
+    .filterBtn {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      border-radius: 0.25rem;
+      img {
+        height: 2rem;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.control {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// list
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+.firstLine {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.listItem {
+  display: grid;
+  grid-template-columns: 2.5rem 27em 10rem 10rem 6rem 9rem 1rem;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+  .check {
+    padding: 14px;
+  }
+  .date {
+    display: flex;
+    gap: 1rem;
+  }
+  .status {
+    margin: auto;
+    span {
+      color: #fff;
+      padding: 0.3rem;
+    }
+  }
+  .delBtn {
+    background-color: transparent;
+  }
+}
+
+.active {
+  border-radius: 6.25rem;
+  background: var(--Blue-1, #2f80ed);
+}
+
+.complete {
+  border-radius: 6.25rem;
+  background: var(--Orange, #f2994a);
+}

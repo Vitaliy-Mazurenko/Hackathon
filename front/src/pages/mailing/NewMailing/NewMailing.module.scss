@@ -1,0 +1,22 @@
+.container {
+  width: 50rem;
+  & > div {
+    margin-bottom: 2rem;
+  }
+}
+
+.date {
+  display: flex;
+  gap: 2rem;
+  & > div {
+    width: 50%;
+  }
+}
+
+.message {
+  p {
+    color: var(--text-secondary, rgba(0, 0, 0, 0.6));
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+}
