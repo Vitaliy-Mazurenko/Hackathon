@@ -9,7 +9,7 @@ const Item = ({content, number}) => {
         <Card className={classes.card}>
             <h3>Питання {number + 1}</h3>
             <h4>{content.name}</h4>
-            <div dangerouslySetInnerHTML={{__html: content.description}}/>
+            <p>{content.description}</p>
         </Card>
     );
 };

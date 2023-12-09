@@ -5,14 +5,20 @@ import classes from './login.module.scss'
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
+import Divider from '@mui/material/Divider';
 
 const Login = () => {
-
   const navigate = useNavigate();
   const [login, setLogin] = useState('admin')
   const [password, setPassword] = useState('')
   const [passwordError, setPasswordError] = useState('')
 
+  const accessToken = localStorage.getItem("login");
+
+  // if(!accessToken){
+  //   return <div>Need to login</div>
+  // }
+  console.log(accessToken);
 
 
   const handleChangePassword = (e) => {
@@ -43,6 +49,9 @@ const Login = () => {
         
         <div className={classes.groupForm}>
         <h2 className={classes.textForm}>е-Ветеран</h2>
+        
+        <Divider className={classes.divider} />
+        <br />
           <TextField
             id="outlined-basic"
             label="Логін"
