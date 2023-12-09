@@ -4,10 +4,17 @@ import {Button} from "@mui/material";
 import Item from "./componets/item/Item.jsx";
 import RedactItem from "./componets/redactItem/RedactItem.jsx";
 import empty from '../../assets/image 6.png'
+import axios from "axios";
+import {useQuery} from "react-query";
 
+const getData = async ()=>{
+    return await axios.get('http://52.201.226.109:8080/api/faqs')
+}
 
 const Question = () => {
 
+    // const data = useQuery('name', getData)
+    // console.log(data)
     const [admin, setAdmin] = useState(false)
     const handleButton = () => {
         setAdmin(true)
