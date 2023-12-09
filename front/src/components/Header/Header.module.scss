@@ -7,12 +7,17 @@ header {
   padding: var(--none, 0rem) var(--5, 2.5rem);
   background: var(--Back, linear-gradient(90deg, #122945 0%, #1177b7 100%));
   top: 0;
+  z-index: 1000;
 }
 
 .title {
   margin: auto 0;
   font-size: 1.625rem;
   font-weight: 400;
+  color: white;
+  &:hover{
+    color: white;
+  }
 }
 
 .user {

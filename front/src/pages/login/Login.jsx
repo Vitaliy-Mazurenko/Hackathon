@@ -7,14 +7,6 @@ import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 
 const Login = () => {
-    // const count = useSelector(state => state.count.count)
-    // const dispatch = useDispatch()
-    // const handlePlus = () => {
-    //     dispatch(increment())
-    // }
-    // const handleMinus = () => {
-    //     dispatch(decrement())
-    // }
 
   const navigate = useNavigate();
   const [login, setLogin] = useState('admin')
