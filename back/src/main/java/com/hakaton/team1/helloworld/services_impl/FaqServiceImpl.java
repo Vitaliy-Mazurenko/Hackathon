@@ -47,6 +47,8 @@ public class FaqServiceImpl implements FaqService {
 
     @Override
     public Faq getFaqByTitle(String selectedTitle) {
-        return faqRepository.getFaqByTitle(selectedTitle);
+        List<Faq> faqsByTitle = faqRepository.findFaqsByTitle(selectedTitle);
+        return faqsByTitle.stream()
+                .findFirst().get();
     }
 }

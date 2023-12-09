@@ -4,7 +4,10 @@ import com.hakaton.team1.helloworld.models.Faq;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface FaqRepository extends CrudRepository<Faq, Integer> {
-    Faq getFaqByTitle(String selectedTitle);
+    List<Faq> findFaqsByTitle(String selectedTitle);
+
 }
