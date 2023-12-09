@@ -22,7 +22,7 @@ const Question = () => {
     const {data} = useQuery('name', getData,{
         refetchOnWindowFocus: false,
     })
-    console.log(data)
+
     const [admin, setAdmin] = useState(false)
     const handleButton = () => {
         setAdmin(true)
@@ -52,10 +52,10 @@ const Question = () => {
         if (isSaveAvailable || newQuestions.length < 1) {
             setQuestions(newQuestions)
             for (let i = 0; i < newQuestions.length; i++) {
-                console.log(1)
+
                 if (data.data.length) {
                     for (let j = 0; j < data.data.length; j++) {
-                        console.log(1)
+
                         if (newQuestions[i].id === data.data[j].id) {
                             putData(newQuestions[i], newQuestions[i].id)
                         } else {
@@ -92,7 +92,7 @@ const Question = () => {
                         {!admin
                             ?
                             questions.map((e, index) => {
-                                console.log(1)
+
                                 return <Item
                                     key={Math.random()}
                                     number={index}
