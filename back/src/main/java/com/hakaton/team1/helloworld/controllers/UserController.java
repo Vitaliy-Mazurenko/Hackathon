@@ -22,9 +22,9 @@ public class UserController {
     }
 
     @PostMapping("/add")
-    @ResponseStatus(HttpStatus.CREATED)
-    public void addUser(@RequestBody User user){
-        userService.saveUser(user);
+    public ResponseEntity<Long> addUser(@RequestBody User user){
+        User result = userService.saveUser(user);
+        return ResponseEntity.ok(result.getId());
     }
 
     @GetMapping("/getAll")
