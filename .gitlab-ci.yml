@@ -1,3 +1,7 @@
+variables:
+  HACKATHON_HOST: "$HACKATHON_HOST"
+  DB_PASSWORD: "$DB_PASSWORD"
+  
 hello-world-task:
   script:
     - echo Hello World!
@@ -43,7 +47,7 @@ run-task:
         docker stop "$CONTAINER_ID"
         docker rm "$CONTAINER_ID"
       fi
-    - docker run -d --name template-container --network template-net -p 8080:8080 template-image:latest
+    - docker run -d --name template-container --network template-net -e HACKATHON_HOST=$HACKATHON_HOST -e DB_PASSWORD=$DB_PASSWORD -p 8080:8080 template-image:latest
   needs:
     - job: create-docker-task
   tags:
