@@ -6,6 +6,7 @@ import Question from "./pages/question/Question.jsx";
 import Home from "./pages/home/Home.jsx"
 import axios from "axios";
 import Analyst from "./pages/analyst/Analyst.jsx";
+import Form from "./pages/form/Form.jsx";
 
 function App() {
    const [login, setLogin] = useState(localStorage.getItem('login'))
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/home" element={<Home/>}/>
                     <Route path='/question' element={<Question/>}/>
                     <Route path='/analyst' element={<Analyst/>}/>
+                    <Route path='/form' element={<Form/>}/>
                 </Routes> :
                 <Routes>
                     <Route path="*" element={<Navigate to="/login"/>}/>
