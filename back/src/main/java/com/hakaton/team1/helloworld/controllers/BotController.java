@@ -6,8 +6,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class BotController extends TelegramLongPollingBot {
-    private final String BOT_TOKEN = "6965852519:AAGIwyTodNeAA6bKNZYUZ1l4kDK06QFMcKE";
-    private final String BOT_USERNAME = "eVeteranbot";
+    private final String BOT_TOKEN = "6955999914:AAEzqaa_GxCragPwQhjjC7LtQV_k8L2v2wg";
+    private final String BOT_USERNAME = "eVeteranSupportBot";
     private boolean isFirstMessage = true;
     @Override
     public void onUpdateReceived(Update update) {
