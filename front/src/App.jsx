@@ -32,6 +32,8 @@ function App() {
                     <Route path="*" element={<Navigate to="/login"/>}/>
 
                      <Route path="/home" element={<Home/>}/>
+                     <Route path='/question' element={<Question/>}/>
+                     <Route path='/analyst' element={<Analyst/>}/>
                      {/* <Route path='/login' element={<Login/>}/>  */}
 
                     <Route path="/login" element={<Login setLogin={setLogin}/>}/>
