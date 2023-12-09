@@ -2,10 +2,17 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import Question from "./pages/question/Question.jsx";
+
+import Login from "./pages/login/Login.jsx";
+
+// import axios from "axios";
+// import Analyst from "./pages/analyst/Analyst.jsx";
+
 import Home from "./pages/home/Home.jsx";
 import Mailing from "./pages/mailing/Mailing.jsx";
 import Form from "./pages/form/Form.jsx";
 import Analyst from "./pages/analyst/Analyst.jsx";
+
 
 function App() {
     const login = localStorage.getItem("login");
